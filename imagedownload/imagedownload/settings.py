@@ -66,7 +66,13 @@ ROBOTSTXT_OBEY = True
 ITEM_PIPELINES = {
     'scrapy.pipelines.images.ImagesPipeline': 1,
 }
-IMAGES_STORE = 'download_image'
+IMAGES_STORE = 'download_image'  # 图片保存路径
+IMAGES_MIN_HEIGHT = 100  # 图片的最小高度
+IMAGES_MIN_WIDTH = 100  # 图片的最小宽度
+IMAGES_THUMBS = {
+    'small': (50, 50),
+    'big': (150, 150),
+}  # 缩略图生成
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 # AUTOTHROTTLE_ENABLED = True
